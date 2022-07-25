@@ -27,7 +27,7 @@ last_modified_at: 2022-07-25T10:53:00
 
 							<!-- Header -->
 								<header id="header">
-									<a href="/index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
+									<a href="{{ sites.url }}/index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
 									<ul class="icons">
 										<li><a href="https://www.instagram.com/skadPtjd/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-steam"><span class="label">Steam</span></a></li>
@@ -114,9 +114,9 @@ last_modified_at: 2022-07-25T10:53:00
 										<h2>메뉴</h2>
 									</header>
 									<ul>
-										<li><a href="/index.html">메인</a></li>
-										<li><a href="/generic.html">제네릭</a></li>
-										<li><a href="/elements.html">홈페이지 구성요소</a></li>
+										<li><a href="{{ sites.url }}/index.html">메인</a></li>
+										<li><a href="{{ sites.url }}/generic.html">제네릭</a></li>
+										<li><a href="{{ sites.url }}/elements.html">홈페이지 구성요소</a></li>
 										<li>
 											<span class="opener">유용한 사이트들</span>
 											<ul>
