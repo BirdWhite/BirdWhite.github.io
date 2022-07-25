@@ -14,7 +14,7 @@ last_modified_at: 2022-07-25T10:53:00
 		<title>컴맹 대학생's 블로그</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
