@@ -27,7 +27,7 @@ last_modified_at: 2022-07-25T10:53:00
 
 							<!-- Header -->
 								<header id="header">
-									<a href="baseurl:index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
+									<a href="/index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
 									<ul class="icons">
 										<li><a href="https://www.instagram.com/skadPtjd/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-steam"><span class="label">Steam</span></a></li>
@@ -49,7 +49,7 @@ last_modified_at: 2022-07-25T10:53:00
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/main.jpg" alt="" />
+										<img src="/images/main.jpg" alt="" />
 									</span>
 								</section>
 
@@ -114,9 +114,9 @@ last_modified_at: 2022-07-25T10:53:00
 										<h2>메뉴</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">메인</a></li>
-										<li><a href="generic.html">제네릭</a></li>
-										<li><a href="elements.html">홈페이지 구성요소</a></li>
+										<li><a href="/index.html">메인</a></li>
+										<li><a href="/generic.html">제네릭</a></li>
+										<li><a href="/elements.html">홈페이지 구성요소</a></li>
 										<li>
 											<span class="opener">유용한 사이트들</span>
 											<ul>
@@ -145,15 +145,15 @@ last_modified_at: 2022-07-25T10:53:00
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic08.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic09.jpg" alt="" /></a>
 											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 									</div>
@@ -186,11 +186,11 @@ last_modified_at: 2022-07-25T10:53:00
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
 
 	</body>
 </html>
