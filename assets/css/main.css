@@ -3502,7 +3502,7 @@
 
 			#main > .inner > section {
 				padding: 6em 0 4em 0 ;
-				border-top: solid 2px rgba(210, 215, 217, 0.75);
+				border-top: solid 2px rgba(45, 40, 38, 0.75); /* edited */
 			}
 
 				#main > .inner > section:first-of-type {
@@ -3619,7 +3619,7 @@
 		}
 
 			#sidebar > .inner > * {
-				border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+				border-bottom: solid 2px rgba(45, 40, 38, 0.75); /* edited */
 				margin: 0 0 3.5em 0;
 				padding: 0 0 3.5em 0;
 			}
