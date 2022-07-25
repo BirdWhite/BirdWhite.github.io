@@ -1,10 +1,28 @@
-title                    : "컴맹 대학생의 블로그"
-name                     : "컴맹 대학생"
-description              : "부산대학교 학생의 개발 블로그"
-url                      : "https://birdwhite.github.io"
-baseurl                  : ""
-logo                     : "/assets/images/logo.png" # 최상단 메뉴 바에 사이트 로고 넣기
-og_image                 : "/assets/images/pic01.jpg"
+# Site settings
+title: "컴맹 대학생의 블로그"
+name: "컴맹 대학생"
+email: wjnam123@gmail.com
+description:
+url: "https://birdwhite.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+author:
+street_address:
+city:
+state:
+zip_code:
+country: South Korea
+phone: "(비공개)"
+
+# Social settings
+facebook_url: https://www.facebook.com/profile.php?id=100006695927582
+github_url: https://github.com/BirdWhite
+instagram_url: https://www.instagram.com/skadPtjd/
+steam_url: https://steamcommunity.com/id/wjnam123/
+
+instagram_id: skadPtjd
+
+# Build settings
+markdown: kramdown
 
 # Outputting
 permalink: /:categories/:title/
@@ -25,15 +43,3 @@ defaults:
       comments: # 블로그 댓글 기능 true
       share: true
       related: true
-
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: false
-      share: true
-      related: false

@@ -7,7 +7,7 @@ categories:
   - Blog
 tags:
   - Blog
-last_modified_at: 2022-07-25T10:53:00
+last_modified_at: 2022-07-25T16:36:00
 ---
 
-이건 이 페이지의 내용입니다.
+Github Pages를 이용해 만든 블로그의 첫 글입니다.
