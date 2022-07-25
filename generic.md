@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /generic.html
 title: Generic
 image: assets/images/pic11.jpg
 ---

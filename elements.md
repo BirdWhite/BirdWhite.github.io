@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /elements.html
 title: Elements
 ---
 
