@@ -14,7 +14,7 @@ last_modified_at: 2022-07-25T10:53:00
 		<title>컴맹 대학생's 블로그</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="baseurl:/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -27,7 +27,7 @@ last_modified_at: 2022-07-25T10:53:00
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
+									<a href="baseurl:index.html" class="logo"><strong>컴맹 대학생</strong>'s Blog</a>
 									<ul class="icons">
 										<li><a href="https://www.instagram.com/skadPtjd/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-steam"><span class="label">Steam</span></a></li>
