@@ -15,23 +15,17 @@
             <h2>메뉴</h2>
           </header>
           <ul>
-            <li><a href="{{ '' | absolute_url }}">메인</a></li>
-            <li><a href="{{ 'generic.html' | absolute_url }}">제네릭</a></li>
+            <li><a href="{{ '' | absolute_url }}"><i class="icon solid fa-home"></i> 메인</a></li>
+            <li><a href="{{ 'post.html' | absolute_url }}"><i class="icon solid fa-layer-group"></i> 포스트</a></li>
             <li><a href="{{ 'elements.html' | absolute_url }}">구성 요소</a></li>
             <li>
-              <span class="opener">유용한 사이트들</span>
+              <span class="opener"><i class="icon solid fa-tools"></i> 유용한 사이트 & 툴</span>
               <ul>
-                <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
-                <li><a href="#">Tempus Magna</a></li>
-                <li><a href="#">Feugiat Veroeros</a></li>
-              </ul>
-            </li>
-            <li>
-              <span class="opener">유용한 툴들</span>
-              <ul>
-                <li><a href="https://github.com/">Github</a></li>
-                <li><a href="https://unity.com/kr">Unity</a></li>
-                <li><a href="https://qgis.org/ko/site/">QGIS</a></li>
+                <li><a href="https://github.com/">Github <i class="icon brands fa-github"></i></a></li>
+                <li><a href="https://stackoverflow.com/">Stack Overflow <i class="icon brands fa-stack-overflow"></i></a></li>
+                <li><a href="https://unity.com/kr">Unity <i class="icon brands fa-unity"></i></a></li>
+                <li><a href="https://www.blender.org/">Blender <i class="icon solid fa-cube"></i></a></li>
+                <li><a href="https://qgis.org/ko/site/">QGIS <i class="icon solid fa-globe-americas"></i></a></li>
                 <li><a href="https://www.opendronemap.org/">Open Drone Map</a></li>
               </ul>
             </li>
@@ -45,15 +39,15 @@
           </header>
           <div class="mini-posts">
             <article>
-              <a href="#" class="image"><img src="assets/images/github-groot.jpg" alt="" /></a>
+              <a href="#" class="image"><img src="{{ 'assets/images/github-groot.jpg' | relative_url }}" alt="" /></a>
               <p>임시 포스트입니다.</p>
             </article>
             <article>
-              <a href="#" class="image"><img src="assets/images/circuit.jpg" alt="" /></a>
+              <a href="#" class="image"><img src="{{ 'assets/images/circuit.jpg' | relative_url }}" alt="" /></a>
               <p>임시 포스트입니다.</p>
             </article>
             <article>
-              <a href="#" class="image"><img src="assets/images/laptop.jpg" alt="" /></a>
+              <a href="#" class="image"><img src="{{ 'assets/images/laptop.jpg' | relative_url }}" alt="" /></a>
               <p>임시 포스트입니다.</p>
             </article>
           </div>
@@ -77,7 +71,7 @@
 
       <!-- Footer -->
         <footer id="footer">
-          <p class="copyright">&copy; {{ site.title }}. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>. Jekyll integration: <a href="https://andrewbanchi.ch">Andrew Banchich</a>.</p>
+          <p class="copyright">&copy; {{ site.title }}. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>. Jekyll integration: <a href="https://andrewbanchi.ch">Andrew Banchich</a>.</p>
         </footer>
 
     </div>

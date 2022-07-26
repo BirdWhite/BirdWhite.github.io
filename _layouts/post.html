@@ -4,6 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 
 {% include head.html %}
@@ -21,15 +22,21 @@
 
                 <!-- Content -->
                 <section>
-                	<header class="main">
-                		<h1>{{ page.title }}</h1>
-                	</header>
+                  <header class="main">
+                    <h2>{{ page.title }} <div style="float: right; font-size:20%">{{ page.last_modified_at }}</div></h2>
+                  </header>
 
                   {% if page.image %}
-                	<span class="image main"><img src="{{ page.image | absolute_url }}" alt="" /></span>
+                  <span class="image main"><img src="{{ page.image | absolute_url }}" alt="" /></span>
                   {% endif %}
 
-                {{ content }}
+                  {{ content }}
+
+                </section>
+
+
+
+                {% include page-button.html %}
 
               </div>
           </div>

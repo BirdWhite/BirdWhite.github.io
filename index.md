@@ -1,11 +1,12 @@
 ---
 layout: default
+permalink: /
 ---
 
 <!-- Section -->
 <section>
 	<header class="major">
-		<h2>Erat lacinia</h2>
+		<h2>방향성</h2>
 	</header>
 	<div class="features">
 		<article>
@@ -37,4 +38,14 @@ layout: default
 			</div>
 		</article>
 	</div>
+</section>
+
+<section>
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
 </section>

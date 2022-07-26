@@ -10,6 +10,42 @@
 
 /* Reset */
 
+/* Color Table */
+
+:root {
+	--mainactivecolor	: #A645E6;		/* 메인 활성화 했을때 색 */
+	--mainhovercolor	: #B961F3;		/* 메인 커서 올렸을 때 색 */
+	--maincolor				: #A557DA;		/* 메인색 */
+
+	--mainbgcolor			: #403340;		/* 메인 배경색 */
+
+	--lightcharcolor	: #CDCDCD;		/*옅은 글자색 */
+	--charcolor				: #E6E6E6;		/* 메인 글자색 */
+	--thickcharcolor	: #FFFFFF;		/* 짙은 글자색 */
+
+	--sidebgcolor			: #664266;		/* 사이드바 배경색 */
+	--searchbgcolor		: #5A365A;		/* 검색창 배경색 */
+
+	--bordercolor			: rgba(210, 215, 217, 0.75);	/* 구분선 색 */
+	--codebgcolor			: rgba(30, 30, 30, 0.25);			/* 코드 구간 배경색 */
+
+	--btnhovercolor		: rgba(165, 87, 218, 0.10);		/* 일반 버튼 커서 올렸을때 색 */
+	--btnactivecolor	: rgba(165, 87, 218, 0.30);		/* 일반 버튼 활성화 했을때 색 */
+
+	--sidebordercolor	:	rgba(225, 230, 232, 0.75);	/* 사이드바 구분선 색 */
+}
+
+	.page-control{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.page-control > div{
+		max-width: 50%;
+	}
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -2054,7 +2090,7 @@
 	}
 
 	body {
-		background: #403340;
+		background: var(--mainbgcolor);
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
@@ -2071,7 +2107,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #E6E6E6;
+		color: var(--charcolor);
 		font-family: "Galmuri11", sans-serif;
 		font-size: 13pt;
 		font-weight: 400;
@@ -2108,13 +2144,13 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #A557DA;
+		color: var(--maincolor);
 		text-decoration: none;
 	}
 
 		a:hover {
-			border-bottom-color: #A557DA;
-			color: #A557DA !important;
+			border-bottom-color: var(--maincolor);
+			color: var(--maincolor) !important;
 		}
 
 			a:hover strong {
@@ -2122,7 +2158,7 @@
 			}
 
 	strong, b {
-		color: #ffffff;
+		color: var(--thickcharcolor);
 		font-weight: 600;
 	}
 
@@ -2135,7 +2171,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: var(--thickcharcolor);
 		font-family: "Galmuri11", serif;
 		font-weight: 700;
 		line-height: 1.5;
@@ -2215,16 +2251,16 @@
 	}
 
 	blockquote {
-		border-left: solid 3px rgba(210, 215, 217, 0.75);
+		border-left: solid 3px var(--bordercolor);
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
 	code {
-		background: rgba(230, 235, 237, 0.25);
+		background: var(--codebgcolor);
 		border-radius: 0.375em;
-		border: solid 1px rgba(210, 215, 217, 0.75);
+		border: solid 1px var(--bordercolor);
 		font-family: "Courier New", monospace;
 		font-size: 0.9em;
 		margin: 0 0.25em;
@@ -2247,7 +2283,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+		border-bottom: solid 1px var(--bordercolor);
 		margin: 2em 0;
 	}
 
@@ -2283,7 +2319,7 @@
 	}
 
 	header.major > :last-child {
-		border-bottom: solid 3px #A557DA;
+		border-bottom: solid 3px var(--maincolor);
 		display: inline-block;
 		margin: 0 0 2em 0;
 		padding: 0 0.75em 0.5em 0;
@@ -2300,7 +2336,7 @@
 	}
 
 	label {
-		color: #ffffff;
+		color: var(--thickcharcolor);
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -2319,10 +2355,10 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #403340;
+		background: var(--mainbgcolor);
 		border-radius: 0.375em;
 		border: none;
-		border: solid 1px rgba(210, 215, 217, 0.75);
+		border: solid 1px var(--bordercolor);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2350,8 +2386,8 @@
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #A557DA;
-			box-shadow: 0 0 0 1px #A557DA;
+			border-color: var(--maincolor);
+			box-shadow: 0 0 0 1px var(--maincolor);
 		}
 
 	.select-wrapper {
@@ -2418,7 +2454,7 @@
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #E6E6E6;
+			color: var(--charcolor);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2444,9 +2480,9 @@
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: #403340;
+				background: var(--mainbgcolor);
 				border-radius: 0.375em;
-				border: solid 1px rgba(210, 215, 217, 0.75);
+				border: solid 1px var(--bordercolor);
 				content: '';
 				display: inline-block;
 				height: 1.65em;
@@ -2460,16 +2496,16 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #ffffff;
-			border-color: #ffffff;
-			color: #403340;
+			background: var(--thickcharcolor);
+			border-color: var(--thickcharcolor);
+			color: var(--mainbgcolor);
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #A557DA;
-			box-shadow: 0 0 0 1px #A557DA;
+			border-color: var(--maincolor);
+			box-shadow: 0 0 0 1px var(--maincolor);
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2481,27 +2517,27 @@
 	}
 
 	::-webkit-input-placeholder {
-		color: #CDCDCD !important;
+		color: var(--lightcharcolor) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #CDCDCD !important;
+		color: var(--lightcharcolor) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #CDCDCD !important;
+		color: var(--lightcharcolor) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #CDCDCD !important;
+		color: var(--lightcharcolor) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: #CDCDCD !important;
+		color: var(--lightcharcolor) !important;
 		opacity: 1.0;
 	}
 
@@ -2509,7 +2545,7 @@
 
 	.box {
 		border-radius: 0.375em;
-		border: solid 1px rgba(210, 215, 217, 0.75);
+		border: solid 1px var(--bordercolor);
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -2652,7 +2688,7 @@
 		}
 
 			ul.alt li {
-				border-top: solid 1px rgba(210, 215, 217, 0.75);
+				border-top: solid 1px var(--bordercolor);
 				padding: 0.5em 0;
 			}
 
@@ -2691,7 +2727,7 @@
 
 			ul.contact li {
 				text-decoration: none;
-				border-top: solid 1px rgba(210, 215, 217, 0.75);
+				border-top: solid 1px var(--bordercolor);
 				margin: 1.5em 0 0 0;
 				padding: 1.5em 0 0 3em;
 				position: relative;
@@ -2708,7 +2744,7 @@
 				}
 
 				ul.contact li:before {
-					color: #A557DA;
+					color: var(--maincolor);
 					display: inline-block;
 					font-size: 1.5em;
 					height: 1.125em;
@@ -2832,16 +2868,16 @@
 				}
 
 					ul.pagination li > .page.active {
-						background-color: #A557DA;
-						color: #403340 !important;
+						background-color: var(--maincolor);
+						color: var(--mainbgcolor) !important;
 					}
 
 						ul.pagination li > .page.active:hover {
-							background-color: #f67878;
+							background-color: var(--mainhovercolor);
 						}
 
 						ul.pagination li > .page.active:active {
-							background-color: #f45c5c;
+							background-color: var(--mainactivecolor);
 						}
 
 				ul.pagination li:first-child {
@@ -2891,7 +2927,7 @@
 	}
 
 		table tbody tr {
-			border: solid 1px rgba(210, 215, 217, 0.75);
+			border: solid 1px var(--bordercolor);
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2905,7 +2941,7 @@
 		}
 
 		table th {
-			color: #ffffff;
+			color: var(--thickcharcolor);
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2913,11 +2949,11 @@
 		}
 
 		table thead {
-			border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+			border-bottom: solid 2px var(--bordercolor);
 		}
 
 		table tfoot {
-			border-top: solid 2px rgba(210, 215, 217, 0.75);
+			border-top: solid 2px var(--bordercolor);
 		}
 
 		table.alt {
@@ -2925,7 +2961,7 @@
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px rgba(210, 215, 217, 0.75);
+				border: solid 1px var(--bordercolor);
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2964,8 +3000,8 @@
 		background-color: transparent;
 		border-radius: 0.375em;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #A557DA;
-		color: #A557DA !important;
+		box-shadow: inset 0 0 0 2px var(--maincolor);
+		color: var(--maincolor) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Galmuri11", serif;
@@ -2986,7 +3022,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(10, 149, 149, 0.05); /*edited*/
+			background-color: var(--btnhovercolor); /*edited*/
 		}
 
 		input[type="submit"]:active,
@@ -2994,7 +3030,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(10, 149, 149, 0.15); /*edited*/
+			background-color: var(--btnactivecolor); /*edited*/
 		}
 
 		input[type="submit"].icon:before,
@@ -3038,9 +3074,9 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #A557DA;
+			background-color: var(--maincolor);
 			box-shadow: none;
-			color: #403340 !important;
+			color: var(--mainbgcolor) !important;
 		}
 
 			input[type="submit"].special:hover,
@@ -3048,7 +3084,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #f67878;
+				background-color: var(--mainhovercolor);
 			}
 
 			input[type="submit"].special:active,
@@ -3056,7 +3092,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #f45c5c;
+				background-color: var(--mainactivecolor);
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -3078,7 +3114,7 @@
 /* Mini Posts */
 
 	.mini-posts article {
-		border-top: solid 1px rgba(210, 215, 217, 0.75);
+		border-top: solid 1px var(--bordercolor);
 		margin-top: 2em;
 		padding-top: 2em;
 	}
@@ -3158,7 +3194,7 @@
 			}
 
 				.features article .icon:before {
-					color: #A557DA;
+					color: var(--maincolor);
 					font-size: 2.75rem;
 					position: relative;
 					top: 0.05em;
@@ -3170,7 +3206,7 @@
 					-ms-transform: rotate(45deg);
 					transform: rotate(45deg);
 					border-radius: 0.25rem;
-					border: solid 2px rgba(210, 215, 217, 0.75);
+					border: solid 2px var(--bordercolor);
 					content: '';
 					display: block;
 					height: 7em;
@@ -3313,7 +3349,7 @@
 		}
 
 			.posts article:before {
-				background: rgba(210, 215, 217, 0.75);
+				background: var(--bordercolor);
 				content: '';
 				display: block;
 				height: calc(100% + 6em);
@@ -3324,7 +3360,7 @@
 			}
 
 			.posts article:after {
-				background: rgba(210, 215, 217, 0.75);
+				background: var(--bordercolor);
 				bottom: -3em;
 				content: '';
 				display: block;
@@ -3502,7 +3538,7 @@
 
 			#main > .inner > section {
 				padding: 6em 0 4em 0 ;
-				border-top: solid 2px rgba(45, 40, 38, 0.75); /* edited */
+				border-top: solid 2px var(--sidebordercolor); /* edited */
 			}
 
 				#main > .inner > section:first-of-type {
@@ -3570,7 +3606,7 @@
 			-webkit-transform: scaleX(-1);
 			-ms-transform: scaleX(-1);
 			transform: scaleX(-1);
-			color: #E6E6E6;
+			color: var(--charcolor);
 			content: '\f002';
 			cursor: default;
 			display: block;
@@ -3602,7 +3638,7 @@
 		-webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 		-ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 		transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-		background-color: #664266; /* edited */
+		background-color: var(--sidebgcolor); /* edited */
 		font-size: 0.9em;
 		position: relative;
 		width: 26em;
@@ -3619,7 +3655,7 @@
 		}
 
 			#sidebar > .inner > * {
-				border-bottom: solid 2px rgba(45, 40, 38, 0.75); /* edited */
+				border-bottom: solid 2px var(--sidebordercolor); /* edited */
 				margin: 0 0 3.5em 0;
 				padding: 0 0 3.5em 0;
 			}
@@ -3635,7 +3671,7 @@
 				}
 
 			#sidebar > .inner > .alt {
-				background-color: #5A3F5A;
+				background-color: var(--searchbgcolor);
 				border-bottom: 0;
 				margin: -2.22222em 0 4.44444em -2.22222em;
 				padding: 2.22222em;
@@ -3783,7 +3819,7 @@
 			}
 
 				#sidebar .toggle:before {
-					color: #E6E6E6;
+					color: var(--charcolor);
 					margin-left: -0.0625em;
 					margin-top: -0.25em;
 					font-size: 1.1rem;
@@ -3810,7 +3846,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		border-bottom: solid 5px #A557DA;
+		border-bottom: solid 5px var(--maincolor);
 		padding: 6em 0 1em 0;
 		position: relative;
 	}
@@ -3970,7 +4006,7 @@
 /* Footer */
 
 	#footer .copyright {
-		color: #CDCDCD;
+		color: var(--lightcharcolor);
 		font-size: 0.9em;
 	}
 
@@ -3985,7 +4021,7 @@
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		color: #ffffff;
+		color: var(--thickcharcolor);
 		font-family: "Galmuri11", serif;
 		font-family: 400;
 		letter-spacing: 0.075em;
@@ -4005,7 +4041,7 @@
 		}
 
 			#menu ul a:hover, #menu ul span:hover {
-				color: #A557DA;
+				color: var(--maincolor);
 			}
 
 			#menu ul a.opener, #menu ul span.opener {
@@ -4036,14 +4072,14 @@
 					-webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 					-ms-transition: color 0.2s ease-in-out, -ms-transform 0.2s ease-in-out;
 					transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-					color: #CDCDCD;
+					color: var(--lightcharcolor);
 					content: '\f078';
 					position: absolute;
 					right: 0;
 				}
 
 				#menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
-					color: #A557DA;
+					color: var(--maincolor);
 				}
 
 				#menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
@@ -4058,13 +4094,13 @@
 				}
 
 	#menu > ul > li {
-		border-top: solid 1px rgba(210, 215, 217, 0.75);
+		border-top: solid 1px var(--bordercolor);
 		margin: 0.5em 0 0 0;
 		padding: 0.5em 0 0 0;
 	}
 
 		#menu > ul > li > ul {
-			color: #CDCDCD;
+			color: var(--lightcharcolor);
 			display: none;
 			margin: 0.5em 0 1.5em 0;
 			padding-left: 1em;
