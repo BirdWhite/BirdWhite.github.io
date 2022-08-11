@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /post.html
+permalink: /post
 title: 블로그 포스트
 image: assets/images/night_sky.jpg
 ---
