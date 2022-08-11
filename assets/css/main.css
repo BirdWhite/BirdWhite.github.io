@@ -2267,6 +2267,22 @@
 		padding: 0.25em 0.65em;
 	}
 
+		code span.c1{
+			color: #4c9900;
+		}
+		code span.na{
+			color: #3399ff;
+		}
+		code span.s{
+			color: #ffb266;
+		}
+		code span.s2{
+			color: #ffb266;
+		}
+		code span.m{
+			color: #ccff99;
+		}
+
 	pre {
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;

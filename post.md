@@ -28,6 +28,7 @@ image: assets/images/night_sky.jpg
     <td style="vertical-align:middle">
       <a href="{{ post.url }}">
         <h2>{{ post.title }}</h2>
+        <h4 style="font-weight: normal">{{ post.subtitle }}</h4>
       </a>
     </td>
 
