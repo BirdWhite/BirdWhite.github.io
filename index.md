@@ -42,10 +42,13 @@ permalink: /
 </section>
 
 <section>
+	<header class="major">
+		<h2>최근 포스트</h2>
+	</header>
   <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+  {% for post in site.posts limit: 5 %}
+    <li style="padding:0.5%">
+      <a href="{{ post.url }}">{{ post.title }}{% if post.subtitle %}<span style="font-size: 80%"> - {{ post.subtitle }}</span>{% endif %}</a>
     </li>
   {% endfor %}
   </ul>
