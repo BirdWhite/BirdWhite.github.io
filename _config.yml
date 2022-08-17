@@ -40,10 +40,19 @@ defaults:
       related: true
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 10 # 첫 페이지에보여줄 최근 게시물 수를 지정
+pagination:
+  enabled: true
+  per_page: 5
+  sort_reverse: true
+  sort_field: 'date'
+  title: ':title'
+  trail:
+    before: 2
+    after: 2
+
 paginate_path: /blog/page:num/
 timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

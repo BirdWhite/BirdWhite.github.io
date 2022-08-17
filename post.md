@@ -3,11 +3,14 @@ layout: page
 permalink: /post
 title: 블로그 포스트
 image: assets/images/night_sky.jpg
+pagination:
+  enabled: true
+  permalink: '/:num/'
 ---
 
 <table>
   <tbody>
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   <tr>
     <td style="width: 25%; vertical-align: middle">
       {% if post.image %}
@@ -19,7 +22,7 @@ image: assets/images/night_sky.jpg
       {% else %}
         <a href="{{ post.url }}">
           <span class="image fit" style="margin: 0 0 0 0">
-            <img src="{{ 'assets/images/circuit.jpg' | absolute_url }}" alt="" />
+            <img src="{{ 'assets/images/old_computer.jpg' | absolute_url }}" alt="" />
           </span>
         </a>
       {% endif %}
@@ -39,3 +42,5 @@ image: assets/images/night_sky.jpg
 {% endfor %}
   </tbody>
 </table>
+
+{% include pagination.html %}

@@ -1,0 +1,12 @@
+
+{% if paginator.page_trail %}
+<ul class="pagination" style="text-align: center;">
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button">이전</a></li>
+    {% for trail in paginator.page_trail %}
+    <li>
+        <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}" {% if page.url == trail.path %}class="page active"{% else %}class="page"{% endif %}>{{ trail.num }}</a>
+    </li>
+    {% endfor %}
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="special button">다음</a></li>
+</ul>
+{% endif %}
