@@ -3,3 +3,4 @@
 Gemfile.lock
 *.gem
 .jekyll-cache
+_site/
