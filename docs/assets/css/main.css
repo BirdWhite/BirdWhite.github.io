@@ -16,6 +16,7 @@
 	--mainactivecolor	: #A645E6;		/* 메인 활성화 했을때 색 */
 	--mainhovercolor	: #B961F3;		/* 메인 커서 올렸을 때 색 */
 	--maincolor				: #A557DA;		/* 메인색 */
+	--alphamaincolor		: rgba(165, 87, 218, 0.7);		/* 반투명 메인색 */
 
 	--mainbgcolor			: #403340;		/* 메인 배경색 */
 
@@ -83,6 +84,17 @@
 
 	body {
 		-webkit-text-size-adjust: none;
+	}
+	body::-webkit-scrollbar {
+		width: 1em;  /* 스크롤바의 너비 */
+	}
+	
+	body::-webkit-scrollbar-thumb {
+		background: var(--maincolor); /* 스크롤바의 색상 */
+	}
+	
+	body::-webkit-scrollbar-track {
+		background: var(--mainbgcolor);  /*스크롤바 뒷 배경 색상*/
 	}
 
 /* Box Model */
@@ -3544,7 +3556,15 @@
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		width: 100%;
+
+		-moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+		-webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+		-ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+		transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 	}
+		#main.sideactive {
+			margin-left: 23em;
+		}
 
 		#main > .inner {
 			padding: 0 6em 0.1em 6em ;
@@ -3654,9 +3674,16 @@
 		-webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 		-ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
 		transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-		background-color: var(--sidebgcolor); /* edited */
+		background-color: var(--sidebgcolor);
 		font-size: 0.9em;
-		position: relative;
+		/* edited */
+		box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		z-index: 10000;
+		/* edited */
 		width: 26em;
 	}
 
@@ -3668,12 +3695,29 @@
 			padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
 			position: relative;
 			width: 26em;
+
+			/* edited */
+			-webkit-overflow-scrolling: touch;
+			height: 100%;
+			left: 0;
+			top: 0;
+			overflow-x: hidden;
+
+			/*
+			
+			
+			
+			
+			*/
+			/* edited */
 		}
 
 			#sidebar > .inner > * {
-				border-bottom: solid 2px var(--sidebordercolor); /* edited */
+				border-bottom: solid 2px var(--sidebordercolor);
 				margin: 0 0 3.5em 0;
 				padding: 0 0 3.5em 0;
+
+
 			}
 
 				#sidebar > .inner > * > :last-child {
@@ -3853,6 +3897,18 @@
 					width: 5em;
 				}
 
+		}
+		
+		#sidebar > .inner::-webkit-scrollbar {
+			width: 0.2em;  /* 스크롤바의 너비 */
+		}
+		
+		#sidebar > .inner::-webkit-scrollbar-thumb {
+			background: var(--maincolor); /* 스크롤바의 색상 */
+		}
+		
+		#sidebar > .inner::-webkit-scrollbar-track {
+			background: var(--mainbgcolor);  /*스크롤바 뒷 배경 색상*/
 		}
 
 /* Header */
@@ -4135,4 +4191,20 @@
 			border-top: 0;
 			margin-top: 0;
 			padding-top: 0;
+		}
+
+/* Top Button */
+
+	#go-top {
+		display: none;
+		position: fixed;
+		height: 5em;
+		right: 1em;
+		bottom: 1em;
+		outline: 0;
+		border: 0;
+		cursor: pointer;
+		z-index: 9999;
+		color: var(--alphamaincolor) !important;
+		box-shadow: inset 0 0 0 2px var(--alphamaincolor);
 		}

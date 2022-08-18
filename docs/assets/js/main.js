@@ -84,21 +84,36 @@
 
 		// Sidebar.
 			var $sidebar = $('#sidebar'),
-				$sidebar_inner = $sidebar.children('.inner');
-
+				$sidebar_inner = $sidebar.children('.inner'),
+				$main = $('#main'),
+				link = window.location.pathname;
+				
 			// Inactive by default on <= large.
 				skel
 					.on('+large', function() {
 						$sidebar.addClass('inactive');
+						$main.removeClass('sideactive');
 					})
 					.on('-large !large', function() {
-						$sidebar.removeClass('inactive');
+						$sidebar.addClass('inactive');
+						$main.removeClass('sideactive');
 					});
+
+			//if now main page inactive sidebar
+				if(link == '/' || link == '/index' || link == '/index.html'){
+					$sidebar.removeClass('inactive');
+					$main.addClass('sideactive');
+				}
 
 			// Hack: Workaround for Chrome/Android scrollbar position bug.
 				if (skel.vars.os == 'android'
 				&&	skel.vars.browser == 'chrome')
 					$('<style>#sidebar .inner::-webkit-scrollbar { display: none; }</style>')
+						.appendTo($head);
+
+				if (skel.vars.os == 'android'
+				&&	skel.vars.browser == 'chrome')
+					$('<style>#main::-webkit-scrollbar { display: none; }</style>')
 						.appendTo($head);
 
 			// Toggle.
@@ -114,7 +129,7 @@
 
 							// Toggle.
 								$sidebar.toggleClass('inactive');
-
+								$main.toggleClass('sideactive');
 						});
 
 				}
@@ -143,6 +158,7 @@
 
 						// Hide sidebar.
 							$sidebar.addClass('inactive');
+							$main.removeClass('sideactive');
 
 						// Redirect to href.
 							setTimeout(function() {
@@ -177,13 +193,14 @@
 
 						// Deactivate.
 							$sidebar.addClass('inactive');
+							$main.removeClass('sideactive');
 
 					});
 
 			// Scroll lock.
 			// Note: If you do anything to change the height of the sidebar's content, be sure to
 			// trigger 'resize.sidebar-lock' on $window so stuff doesn't get out of sync.
-
+				/*
 				$window.on('load.sidebar-lock', function() {
 
 					var sh, wh, st;
@@ -253,7 +270,7 @@
 						})
 						.trigger('resize.sidebar-lock');
 
-					});
+				});*/
 
 		// Menu.
 			var $menu = $('#menu'),
@@ -279,6 +296,18 @@
 					});
 
 				});
+		//topbutton script
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#go-top').fadeIn(500);
+				} else {
+					$('#go-top').fadeOut('slow');
+				}
+				});
+				$('#go-top').click(function (e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop: 0}, 200);
+			});
 
 	});
 
