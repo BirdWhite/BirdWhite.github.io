@@ -85,9 +85,8 @@
 		// Sidebar.
 			var $sidebar = $('#sidebar'),
 				$sidebar_inner = $sidebar.children('.inner'),
-				$main = $('#main'),
-				link = window.location.pathname;
-				
+				$main = $('#main');
+
 			// Inactive by default on <= large.
 				skel
 					.on('+large', function() {
@@ -95,15 +94,19 @@
 						$main.removeClass('sideactive');
 					})
 					.on('-large !large', function() {
-						$sidebar.addClass('inactive');
-						$main.removeClass('sideactive');
+						$sidebar.removeClass('inactive');
+						$main.addClass('sideactive');
 					});
 
 			//if now main page inactive sidebar
+			/*
+			var link = window.location.pathname;
+
 				if(link == '/' || link == '/index' || link == '/index.html'){
 					$sidebar.removeClass('inactive');
 					$main.addClass('sideactive');
 				}
+			*/
 
 			// Hack: Workaround for Chrome/Android scrollbar position bug.
 				if (skel.vars.os == 'android'

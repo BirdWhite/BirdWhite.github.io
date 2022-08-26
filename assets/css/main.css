@@ -2283,7 +2283,7 @@
 			color: #4c9900;
 		}
 		code span.na{
-			color: #3399ff;
+			color: #75eaff;
 		}
 		code span.s{
 			color: #ffb266;
@@ -2293,6 +2293,12 @@
 		}
 		code span.m{
 			color: #ccff99;
+		}
+		code span.nt{
+			color: #3399ff;
+		}
+		code span.c{
+			color: #4c9900;
 		}
 
 	pre {
